@@ -1,0 +1,48 @@
+{
+  "name": "react-whether",
+  "version": "1.1.1",
+  "description": "A react component to perform if/else logic",
+  "main": "cjs/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "sideEffects": false,
+  "devDependencies": {
+    "@types/prop-types": "^15.7.0",
+    "@types/react": "^16.8.7",
+    "coveralls": "^3.0.1",
+    "prop-types": "^15.5.10",
+    "react": "^16.4.0",
+    "react-test-renderer": "^16.8.4",
+    "reskript": "^0.21.0"
+  },
+  "peerDependencies": {
+    "react": ">=15"
+  },
+  "scripts": {
+    "test": "yarn run build && skr test --target=react --coverage",
+    "build": "skr rollup --clean",
+    "report-cov": "cat coverage/lcov.info | coveralls",
+    "lint": "skr lint",
+    "ci": "yarn test && yarn run build",
+    "prepublishOnly": "yarn run ci"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otakustay/react-whether.git"
+  },
+  "files": [
+    "es",
+    "cjs"
+  ],
+  "keywords": [
+    "react",
+    "if",
+    "component"
+  ],
+  "author": "otakustay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/otakustay/react-whether/issues"
+  },
+  "homepage": "https://github.com/otakustay/react-whether#readme"
+}
